@@ -12,10 +12,14 @@ Welcome to the Misemohubu API! This API provides a comprehensive collection of S
 ## API Endpoints
 The Misemohubu API offers the following endpoints:
 
-`GET /api/proverbs/random:` Retrieves a random Swahili proverb.
-`GET /api/proverbs/search:` Searches for proverbs based on provided keywords.
-`GET /api/proverbs/:id:` Retrieves detailed information for a specific proverb by ID.
-`POST /api/proverbs:` Allows users to contribute new proverbs to the collection.
+
+   1. `GET /api/proverbs/random:` Retrieves a random Swahili proverb.
+  
+   2. `GET /api/proverbs/search:` Searches for proverbs based on provided keywords.
+  
+   3. `GET /api/proverbs/:id:` Retrieves detailed information for a specific proverb by ID.
+
+   4. `POST /api/proverbs:` Allows users to contribute new proverbs to the collection.
 
 # Contributing
 

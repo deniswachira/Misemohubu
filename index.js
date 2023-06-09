@@ -17,7 +17,9 @@ mongoose.connect(process.env.MONGO_URL, {
 }).then(console.log("connected to mongodb"))
     .catch((err) => console.log(err));
 
-
+app.get('/', (req, res) =>
+    res.send("Welcome to MisemoHubu API")
+);
 app.use("/api/v1/proverbs", proverbsRoute);
 
 app.listen(process.env.PORT || 5000, () => {

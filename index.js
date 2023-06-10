@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const proverbsRoute = require('./routes/proverbs');
+const proverbsRoute = require('./routes/proverbRoute');
 const cookieParser = require('cookie-parser');
 
 //middlewares
@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGO_URL, {
 app.get('/', (req, res) =>
     res.send("Welcome to MisemoHubu API")
 );
-app.use("/api/v1/proverbs", proverbsRoute);
+app.use("/v1/proverbs", proverbsRoute);
 
 app.listen(process.env.PORT || 5000, () => {
     console.log('Server running on port 5000');

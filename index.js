@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const proverbsRoute = require('./routes/proverbRoute');
 const cookieParser = require('cookie-parser');
+const adminRoute = require('./routes/admin');
 
 //middlewares
 app.use(cookieParser())
@@ -21,6 +22,7 @@ app.get('/', (req, res) =>
     res.send("Welcome to MisemoHubu API")
 );
 app.use("/v1/proverbs", proverbsRoute);
+app.use("/v1/admin", adminRoute);
 
 app.listen(process.env.PORT || 5000, () => {
     console.log('Server running on port 5000');
